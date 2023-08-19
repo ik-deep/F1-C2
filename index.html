@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Library System</title>
+</head>
+<body>
+        <nav id="navbar">
+            
+        <h2><a href="#"> Library System</a></h2>
+            <ul>
+                <li><a href="#books">Books</a></li>
+                <li><a href="#reg">Register</a></li>
+            </ul>
+        </nav>
+    <section id="books">
+        <h1>Welcome to the Library System</h1>
+       
+<table>
+    <tr>
+      <th>Book ID</th>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Genre</th>
+      <th>Availability</th>
+    </tr>
+    <tr>
+      <td>001</td>
+      <td>
+        <table class="nested-table">
+            <a href="#">book title 1</a>
+          <tr>
+            <td class="nested-th">Publication Date:</td>
+            <td class="nested-td">2023-08-19</td>
+          </tr>
+          <tr>
+            <td class="nested-th">Page Count:</td>
+            <td class="nested-td">320</td>
+          </tr>
+          <tr>
+            <td class="nested-th">ISBN:</td>
+            <td class="nested-td">1234567890</td>
+          </tr>
+        </table>
+      </td>
+      <td>AJ</td>
+      <td>Fantasy</td>
+      <td>In Stock</td>
+      
+    </tr>
+    <tr>
+        <td>002</td>
+        <td>
+          <table class="nested-table">
+              <a href="#">book title 2</a>
+            <tr>
+              <td class="nested-th">Publication Date:</td>
+              <td class="nested-td">2023-08-19</td>
+            </tr>
+            <tr>
+              <td class="nested-th">Page Count:</td>
+              <td class="nested-td">320</td>
+            </tr>
+            <tr>
+              <td class="nested-th">ISBN:</td>
+              <td class="nested-td">1234567890</td>
+            </tr>
+          </table>
+        </td>
+        <td>Amelia</td>
+        <td>Fantasy</td>
+        <td>In Stock</td>
+        
+      </tr>
+      <tr>
+        <td>003</td>
+        <td>
+          <table class="nested-table">
+              <a href="#">book title 3</a>
+            <tr>
+              <td class="nested-th">Publication Date:</td>
+              <td class="nested-td">2023-08-19</td>
+            </tr>
+            <tr>
+              <td class="nested-th">Page Count:</td>
+              <td class="nested-td">320</td>
+            </tr>
+            <tr>
+              <td class="nested-th">ISBN:</td>
+              <td class="nested-td">1234567890</td>
+            </tr>
+          </table>
+        </td>
+        <td> John</td>
+        <td>Fantasy</td>
+        <td>In Stock</td>
+        
+      </tr>
+      <tr>
+        <td>004</td>
+        <td>
+          <table class="nested-table">
+              <a href="#">book title 4</a>
+            <tr>
+              <td class="nested-th">Publication Date:</td>
+              <td class="nested-td">2023-08-19</td>
+            </tr>
+            <tr>
+              <td class="nested-th">Page Count:</td>
+              <td class="nested-td">320</td>
+            </tr>
+            <tr>
+              <td class="nested-th">ISBN:</td>
+              <td class="nested-td">1234567890</td>
+            </tr>
+          </table>
+        </td>
+        <td>Johnson</td>
+        <td>Fantasy</td>
+        <td>Out of Stock</td>
+        
+      </tr>
+      <tr>
+        <td>005</td>
+        <td>
+          <table class="nested-table">
+              <a href="#">book title 5</a>
+            <tr>
+              <td class="nested-th">Publication Date:</td>
+              <td class="nested-td">2023-08-19</td>
+            </tr>
+            <tr>
+              <td class="nested-th">Page Count:</td>
+              <td class="nested-td">320</td>
+            </tr>
+            <tr>
+              <td class="nested-th">ISBN:</td>
+              <td class="nested-td">1234567890</td>
+            </tr>
+          </table>
+        </td>
+        <td>ABC</td>
+        <td>settings</td>
+        <td>In Stock</td>
+        
+      </tr>
+    <!-- Add more rows here -->
+  </table>
+  
+    </section>
+    <section id="reg">
+        <div class="container" >
+            <h2 style="margin-bottom:20px">Registration Form</h2>
+            <form action="#" method="post">
+            
+              <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+    
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+        
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+        
+    
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="5" max="100" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        
+    
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" oninput="validatePassword()" required>
+            
+            <button type="submit" >Register</button>
+        
+          </form>
+        </div>
+    </section> 
+
+    <script>
+        function validatePassword() {
+          var password = document.getElementById("password");
+          var confirmPassword = document.getElementById("confirmPassword");
+      
+          if (password.value != confirmPassword.value) {
+            confirmPassword.setCustomValidity("Passwords do not match");
+          } else {
+            confirmPassword.setCustomValidity("");
+          }
+        }
+      </script>
+</body>
+</html>
